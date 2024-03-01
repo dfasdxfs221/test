@@ -1,7 +1,5 @@
-<img
-      src="assets/images/ring-tailed-lemurs.webp"
-      alt="A Group of Ring-tailed Lemurs"
-      title="Ring-tailed lemurs are led by females"
-      loading="lazy"
-/>
-<p>Ring-tailed lemurs are social animals</p>
+<body style="background-image:url('img/low.jpg')">
+
+           <h2>Привет, мир!</h2>
+
+</body>
