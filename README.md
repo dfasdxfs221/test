@@ -1,3 +1,7 @@
-p {
-  background-image: url("https://github.com/dfasdxfs221/test/assets/161844415/181ebf4e-8111-45e3-89fa-7291a2d27f4b");
-}
+<img
+      src="assets/images/ring-tailed-lemurs.webp"
+      alt="A Group of Ring-tailed Lemurs"
+      title="Ring-tailed lemurs are led by females"
+      loading="lazy"
+/>
+<p>Ring-tailed lemurs are social animals</p>
