@@ -1,7 +1,32 @@
-aHR0cHM6Ly9naXRodWIuY29tLzM0MTdQb3N5Z2FjaWwvMjhnYnUwbDg4ZTl3aGM=
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Закодированная кликабельная картинка</title>
+    <script type="text/javascript">
+        function decodeImageAndRedirect() {
+            // Закодированная строка изображения в формате base64
+            var encodedImage = "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==";
 
-213
-<a href="123ы"><img src="https://github.com/dfasdxfs221/test/assets/161844415/5d7bddb6-648f-4011-a620-87e97b209e4d" /></a>
-</p>
+            // Декодирование строки изображения в формате base64
+            var decodedImage = atob(encodedImage);
 
-<img src="data:image/gif;base64,R0lGODlhDQAMANUAAFRVVtHd74S192aZzHqVuLq0rvf39+zr6bXI4qizwufdz5WhsmSt/5rC+r3Ezm1zeJiSjmum8tzm9bvZ/6bB5a6qpn+t5dvVzZK88+v8/7vg/7DJ4P/99V5gY8zMzObm5ofD/6zQ/3Fua8fX69fm+vDy9OPi4czh/4SXrJLC/////+7u7Wmt/87f9oG2/5Oku5mZmf///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAUUADEALAAAAAANAAwAAAZTwJhwSIwhDsUixZEkWhLNYeQVjYUYBIVKSCKeGIOCymCISTATISsCu5RKW1VAkHKBUBDToRxTcUYNGhsdFR8GW0IqJS0ZDyIrh0kqCwBIVR4eTUEAOw==" />
+            // Создание объекта Blob из декодированной строки
+            var arrayBuffer = new ArrayBuffer(decodedImage.length);
+            var uint8Array = new Uint8Array(arrayBuffer);
+            for (var i = 0; i < decodedImage.length; i++) {
+                uint8Array[i] = decodedImage.charCodeAt(i);
+            }
+            var blob = new Blob([uint8Array], {type: 'image/png'});
+
+            // Создание URL-адреса для объекта Blob
+            var url = URL.createObjectURL(blob);
+
+            // Создание нового окна или вкладки с URL-адресом изображения
+            window.open(url);
+        }
+    </script>
+</head>
+<body>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==" alt="Кликабельная картинка" onclick="decodeImageAndRedirect()" style="cursor: pointer;">
+</body>
+</html>
