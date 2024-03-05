@@ -1,1 +1,17 @@
-
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Закодированная ссылка</title>
+  <script type="text/javascript">
+    function decodeLink() {
+      var encodedLink = "aHR0cHM6Ly9naXRodWIuY29tL3BsYWlu";
+      var decodedLink = atob(encodedLink);
+      document.getElementById("myLink").href = decodedLink;
+    }
+  </script>
+</head>
+<body onload="decodeLink()">
+  <a id="myLink" href="#">Нажмите здесь</a>
+</body>
+</html>
